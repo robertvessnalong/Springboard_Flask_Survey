@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block title %}Homepage{% endblock %} {%block h1
+%}Question {{num}} {% endblock %} {% block content %}
+{{survey.questions[num].question}}
+<form action="/answer" method="POST">
+  <label for="Yes">{{survey.questions[num].choices[0]}}</label>
+  <input
+    type="radio"
+    value="{{survey.questions[num].choices[0]}}"
+    name="answer"
+    id="No"
+  />
+  <label for="No">{{survey.questions[num].choices[1]}}</label>
+  <input
+    type="radio"
+    value="{{survey.questions[num].choices[1]}}"
+    name="answer"
+    id="No"
+  />
+  <input type="submit" value="Submit" />
+</form>
+{% endblock%}

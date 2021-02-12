@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block title %}Agreement{% endblock %} {%block h1
+%}Survery will be used to provide a better customer experience{% endblock %} {%
+block content %}
+<form action="/questions/0" method="post">
+  <label for="terms">Please accept the terms and agreement</label>
+  <input type="checkbox" name="terms" id="terms" />
+  <button>Submit</button>
+</form>
+{% endblock%}
